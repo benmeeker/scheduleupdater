@@ -23,7 +23,8 @@ func writeLines(lines []string, path string) error {
 }
 
 func readFile() {
-	Filecontent, eerr := ods.ReadODSFile(`C:\Users\GROWJiffy\Desktop\Schedule.ods`)
+	// TODO: Put in your filepath
+	Filecontent, eerr := ods.ReadODSFile(`filepath`)
 	if eerr != nil {
 		fmt.Printf("Read : %s\n", eerr)
 		var yes string
