@@ -10,11 +10,14 @@ import (
 func notify(uploadFile string) {
 	e := email.NewEmail()
 	e.AttachFile(uploadFile)
-	e.From = "schedule updater <scheduleupdater@gmail.com>"
-	e.To = []string{"ben@meekers.org", "ublaknoob@yahoo.com", "schultz.15@icloud.com", "l_gardner1991@yahoo.com", "coleshrop@gmail.com", "jonahlarsen001@gmail.com", "harrisonhthomas@gmail.com", "jacobbird.birdes@gmail.com"}
+	// TDOO: Update the email header
+	e.From = "name <@gmail.com>"
+	// TODO: Put in your (TO) email addresses below
+	e.To = []string{"Email addresses"}
 	e.Subject = "Schedule has been updated"
 	e.Text = []byte("Weekly Schedule")
-	err := e.Send("smtp.gmail.com:587", smtp.PlainAuth("", "scheduleupdater@gmail.com", "schedule123", "smtp.gmail.com"))
+	// TODO: Put in your email and details
+	err := e.Send("smtp.gmail.com:587", smtp.PlainAuth("", "@gmail.com", "password", "smtp.gmail.com"))
 	if err != nil {
 		log.Print(err)
 	}
